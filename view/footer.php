@@ -1,9 +1,7 @@
 <footer class="footer">
             <ul class="deconnection">
               <li><a href="index.php?action=deconnection" >Déconnection </a> </li>
-             <!--session_destroy() au clic
-             jquery fonction ajax ?? 
-             variable GET ???-->
+              <li><a href="/projet4/view/adminPass.php">Espace auteur</a></li>
             </ul>
             
             <nav>

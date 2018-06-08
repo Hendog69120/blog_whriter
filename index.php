@@ -19,11 +19,10 @@ if (isset($_GET['billet']) && $_GET['billet'] > 0) {
         exit;
     }
     $post = $postManager->getPost($_GET['billet']);
-    //var_dump($post);die;
-    //var_dump($_SESSION['pseudo']);die;
+
     
     if (isset($_POST["comment"])) {
-        //insert comment ($_get["billet], le comment)
+        
         $commentManager->addComment($_POST['post_id'], $_SESSION['pseudo'], $_POST['comment']);
     }
     $comments = $commentManager->getComments($_GET['billet']);
@@ -36,13 +35,18 @@ else if (isset($_GET["action"]) && $_GET["action"] == "deconnection")
     deconnect();
 }
 
+
 else {
+    if (isset($_POST['title']) && (isset($_POST['content']))) {
+        $postManager->addPost($_POST['title'], $_POST['content']);
+        header('Location: http://localhost/projet4/index.php');
+    }
     // Connexion à la base de données
     $db = $LastManager->__construct($credentials);
     
     $data = $LastManager->getFiveLast($credentials);
     
-require("view/home.php");
+    require("view/home.php");
    
 }
 

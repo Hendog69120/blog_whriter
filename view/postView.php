@@ -27,7 +27,7 @@
             <form method="post" action="" >
             <p>
             <input type="hidden" value="<?php echo($post['id'])?>" name="post_id" />
-            <!--label for="pseudo">Pseudo</label--> <label for="session_pseudo"><?php echo($_SESSION['pseudo'])?></label> <br />
+            <label for="session_pseudo"><?php echo($_SESSION['pseudo'])?></label> <br />
             <label for="comment">Message</label> :  <input type="text" name="comment" id="comment" /><br />
 
             <input type="submit" value="Envoyer" />

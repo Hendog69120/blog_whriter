@@ -112,7 +112,7 @@ h3
 
 
 
-.registration_connection__form
+.registration_connection__form, .adminPass_form
 {
   position: absolute;
   border: none;
@@ -123,7 +123,7 @@ h3
   text-align: center;
 }
 
-.registration_connection__form input
+.registration_connection__form input, .adminPass_form input
 {
 	  width: 100%;
     border: 1px solid lightgrey;
@@ -165,7 +165,7 @@ textarea {
     border: solid;
 }
 
-.post_connection__form {
+.post_connection__form, .post_article__form {
     position: relative;
     border: none;
     background-color: #E8F6FA;

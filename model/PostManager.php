@@ -37,4 +37,22 @@ class PostManager
         return $post;
     }
 
+    public function addPost($title, $content)
+    {
+        $req = $this->db->prepare('INSERT INTO post(title, content, creation_date) VALUES ( :title, :content, NOW())');
+    
+        $req -> bindParam(':title', $title);
+        $req -> bindParam(':content', $content);
+        
+        $req->execute();
+        
+        return $req;
+    }
+
+    public function deletePost($postId) 
+    {
+        $req = $this->db->prepare('DELETE FROM post WHERE id = ?');
+        $req ->execute(array($postId));
+        $post = $req->fetch();
+    }
 }

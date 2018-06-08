@@ -42,7 +42,4 @@ class CommentManager
         return $req;
     
     }
-
-
-
 }

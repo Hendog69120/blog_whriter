@@ -29,6 +29,8 @@
         <em><a href="index.php?billet=<?php echo $post['id']; ?>">Commentaires</a></em>
         </p>
     </div>
+
+ 
     <?php
     } // Fin de la boucle des post
     //$req->closeCursor();
