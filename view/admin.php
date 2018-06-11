@@ -8,13 +8,13 @@
     <link href="style.css" rel="stylesheet" /> 
 </head>
 <body>
+
 <?php
-    
     if ((isset($_POST['pass_admin']) && $_POST['pass_admin'] == "lyon") || (isset($_SESSION['admin'])))// .gitignore !!!
     {
-        $_SESSION['admin'] = 'connected';
-        require("header.php");
-    }
+        $_SESSION['admin'] = 'admin connected';
+        var_dump($_SESSION);
+        require('header.php'); 
     ?>
 
     <h1>Espace administrateur</h1>
@@ -31,6 +31,9 @@
             </p>
             </form>
         </div>
+        <?php
+    }
+    ?>
 </body>
 </html>
 

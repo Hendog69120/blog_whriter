@@ -29,6 +29,7 @@
                 echo "<h2> $message </h2>";
                   unset($_SESSION["error"], $message);
             }
+
         ?>
         
 </header>
