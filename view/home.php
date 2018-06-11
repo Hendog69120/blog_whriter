@@ -13,9 +13,14 @@
 
     foreach ($data as $post)
     { 
+        
+        var_dump($_SESSION);
     ?>
     <div class="news">
+
         <h3>
+            <a href="index.php?action=remove&id=<?= $post['id']; ?>">supprimer</a>
+            <a href="index.php?action=update">modifier</a><!--à modifier -->
             <?php echo htmlspecialchars($post['title']); ?>
             <em>le <?php echo $post['date_creation_fr']; ?></em>
         </h3>
